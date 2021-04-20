@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #313131;
+}
+
+.main-title {
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 650px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.panel {
+  background-size: 100% auto;
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  flex: 0.5;
+  overflow: hidden;
+  transition: 0.5s ease-in;
+}
+.panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #313131;
+  opacity: 25%;
+  border-radius: 10px;
+}
+.panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 20%;
+  border-radius: 10px;
+}
+.panel .content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  color: #eff4f5;
+  opacity: 0;
+}
+.panel .content .subtitle {
+  margin-bottom: 20px;
+}
+.panel .content span {
+  float: right;
+  font-size: 12px;
+  margin-top: 30px;
+  color: #d0d3d4;
+}
+.panel .content a {
+  color: #d0d3d4;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active .content {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.4s;
+}
+
+@media (min-height: 500px) {
+  .container {
+    padding: 0 25px;
+    height: 80vh;
+  }
+
+  .panel .content {
+    padding: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .panel .content {
+    padding: 20px;
+  }
+
+  .panel .content .subtitle {
+    margin-bottom: 10px;
+  }
+
+  .panel .content span {
+    display: none;
+  }
+}
+
+@media (min-height: 800px) {
+  .container {
+    height: 65vh;
+  }
+
+  .panel .content {
+    padding-top: 40px;
+  }
+}
+
+@media (min-height: 1020px) {
+  .container {
+    height: 65vh;
+  }
+
+  .panel .content {
+    padding: 80px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 420px) {
+  body {
+    overflow: visible;
+    height: auto;
+  }
+
+  .main-title {
+    margin-top: 40px;
+  }
+  .container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .panel {
+    cursor: none;
+    padding-bottom: 20px;
+  }
+
+  .panel .content {
+    opacity: 1;
+  }
+}
