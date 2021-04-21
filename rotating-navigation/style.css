@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+  --bg-color: #313131;
+  --bg-color2: #f4f4f4;
+  --bg-menu: #f5cba7;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  color: #313131;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: var(--bg-color2);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container.show-nav {
+  -webkit-transform: rotate(-18deg);
+  -ms-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+
+.container.show-nav .circle {
+  -webkit-transform: rotate(-73deg);
+  -ms-transform: rotate(-73deg);
+  transform: rotate(-73deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background-color: var(--bg-menu);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 26px;
+}
+
+.circle button:focus {
+  outline: 0;
+}
+
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 60%;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.content {
+  max-width: 1000px;
+  overflow-x: hidden;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.content .image {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.content .image img {
+  width: 100%;
+}
+
+.content .image span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+.content .image a {
+  font-family: inherit;
+  color: #fff;
+  font-size: 14px;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  color: #fff;
+  font-size: 20px;
+  padding: 7px;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  -o-transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  margin-left: 10px;
+}
+nav ul li i {
+  margin-right: 5px;
+}
+nav ul li + li {
+  margin-left: 25px;
+  -webkit-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 35px;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+.container.show-nav + nav li {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.4s linear 0.3s;
+  transition: -webkit-transform 0.4s linear 0.3s;
+  -o-transition: transform 0.4s linear 0.3s;
+  transition: transform 0.4s linear 0.3s;
+  transition: transform 0.4s linear 0.3s, -webkit-transform 0.4s linear 0.3s;
+}
+
+@media (max-width: 500px) {
+  .content {
+    padding: 100px 35px 50px 50px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#76d7c4),
+    to(#bb8fce)
+  );
+  background: -o-linear-gradient(#76d7c4, #bb8fce);
+  background: linear-gradient(#76d7c4, #bb8fce);
+}
+
+.search {
+  position: relative;
+}
+
+input {
+  position: fixed;
+  right: calc(50vw - 80px);
+  background: #fff;
+  border: none;
+  height: 40px;
+  width: 0;
+  font-size: 18px;
+  color: #313131;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease;
+  -o-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+.search.active .input {
+  width: 200px;
+  padding: 15px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.search.active ::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.search.active ::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.search.active :-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.search.active ::-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.search.active ::placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.btn {
+  position: fixed;
+  right: calc(50vw - 120px);
+  border: none;
+  height: 40px;
+  background: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn i {
+  color: #abb2b9;
+}
+
+.search.active .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
