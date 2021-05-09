@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: url(bg-image.jpg) no-repeat center center/cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(52, 152, 219, 0.6)),
+    color-stop(49%, rgba(52, 152, 219, 0.6)),
+    color-stop(49%, rgba(255, 255, 255, 0.6)),
+    color-stop(51%, rgba(255, 255, 255, 0.6)),
+    color-stop(51%, rgba(187, 143, 206, 0.6)),
+    to(rgba(187, 143, 206, 0.6))
+  );
+  background-image: -o-linear-gradient(
+    top,
+    rgba(52, 152, 219, 0.6) 0%,
+    rgba(52, 152, 219, 0.6) 49%,
+    rgba(255, 255, 255, 0.6) 49%,
+    rgba(255, 255, 255, 0.6) 51%,
+    rgba(187, 143, 206, 0.6) 51%,
+    rgba(187, 143, 206, 0.6) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(52, 152, 219, 0.6) 0%,
+    rgba(52, 152, 219, 0.6) 49%,
+    rgba(255, 255, 255, 0.6) 49%,
+    rgba(255, 255, 255, 0.6) 51%,
+    rgba(187, 143, 206, 0.6) 51%,
+    rgba(187, 143, 206, 0.6) 100%
+  );
+  z-index: -1;
+}
+
+#nav {
+  background-color: #fff;
+  border-radius: 2px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0, 0.3);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0, 0.3);
+  -webkit-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+  transition: width 0.6s linear;
+}
+#nav.active {
+  width: 350px;
+}
+
+#nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0;
+  -webkit-transition: width 0.6s linear;
+  -o-transition: width 0.6s linear;
+  transition: width 0.6s linear;
+  overflow: hidden;
+}
+
+#nav.active ul {
+  width: 100%;
+}
+
+#nav ul li {
+  opacity: 0;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transition: opacity 0.6s linear, -webkit-transform 0.6s linear;
+  transition: opacity 0.6s linear, -webkit-transform 0.6s linear;
+  -o-transition: transform 0.6s linear, opacity 0.6s linear;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+  transition: transform 0.6s linear, opacity 0.6s linear,
+    -webkit-transform 0.6s linear;
+}
+
+#nav.active ul li {
+  opacity: 1;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+#nav ul a {
+  text-decoration: none;
+  color: #313131;
+  margin: 0 10px;
+}
+
+#nav ul a:hover {
+  color: #8413b4;
+}
+
+.icon {
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon:active,
+.icon:focus {
+  outline: none;
+}
+
+.line {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 20px;
+  height: 2px;
+  background-color: #8413b4;
+  -webkit-transition: -webkit-transform 0.6s linear;
+  transition: -webkit-transform 0.6s linear;
+  -o-transition: transform 0.6s linear;
+  transition: transform 0.6s linear;
+  transition: transform 0.6s linear, -webkit-transform 0.6s linear;
+}
+
+.line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+#nav.active .line1 {
+  -webkit-transform: rotate(-765deg) translateY(5.5px);
+  -ms-transform: rotate(-765deg) translateY(5.5px);
+  transform: rotate(-765deg) translateY(5.5px);
+}
+#nav.active .line2 {
+  -webkit-transform: rotate(765deg) translateY(-5.5px);
+  -ms-transform: rotate(765deg) translateY(-5.5px);
+  transform: rotate(765deg) translateY(-5.5px);
+}
+
+.attribute {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.attribute a {
+  color: rgba(255, 255, 255, 0.5);
+}
