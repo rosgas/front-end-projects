@@ -81,8 +81,8 @@ function touchEvent(){
 
     isPressed = true
     
-    x = e.touches[0].clientX - canvasLeft
-    y = e.touches[0].clientY - canvasTop
+    x0 = e.touches[0].clientX - canvasLeft
+    y0 = e.touches[0].clientY - canvasTop
     
   }, {passive: false});
 
@@ -91,22 +91,22 @@ function touchEvent(){
 
     isPressed = false
       
-    x = undefined
-    y = undefined
+    x0 = undefined
+    y0 = undefined
   }, {passive: false})
 
   
   canvas.addEventListener("touchmove", (e) => {
     
     if(isPressed){
-      x2 = e.touches[0].clientX - canvasLeft
-      y2 = e.touches[0].clientY - canvasTop
+      x3 = e.touches[0].clientX - canvasLeft
+      y3 = e.touches[0].clientY - canvasTop
   
-      drawCircle(x2,y2)
-      drawLine(x,y,x2,y2)
+      drawCircle(x3,y3)
+      drawLine(x0,y0,x3,y3)
   
-      x=x2
-      y=y2
+      x0=x3
+      y0=y3
     }
   }, {passive: false})
 }
