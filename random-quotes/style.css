@@ -78,7 +78,7 @@ body {
   -webkit-box-shadow: inset 0 0 13px #313131;
   box-shadow: inset 0 0 13px #313131;
   position: relative;
-  padding: 40px 50px;
+  padding: 50px 50px;
   text-align: center;
   z-index: 2;
 }
