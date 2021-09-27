@@ -22,17 +22,17 @@ function createInfoNotification() {
 
   setTimeout(() => {
     notificationEl.remove()
-  }, 10000)
+  }, 3000)
 }
 
-successBtn.addEventListener('click', () => createsuccessNotification())
+successBtn.addEventListener('click', () => createSuccessNotification())
 
-function createsuccessNotification() {
+function createSuccessNotification() {
   const notificationEl = document.createElement('div')
   notificationEl.classList.add('notification-box', 'success-box', 'show')
 
   notificationEl.innerHTML = `
-  <i class="icon success-icon fas fa-comment fa-2x"></i>
+  <i class="icon success-icon fas fa-check-circle fa-2x"></i>
   <div class="content">
     <h2 class="title success-title">Success notification</h2>
     <p class="text">This is a success notification</p>
@@ -45,14 +45,14 @@ function createsuccessNotification() {
   }, 3000)
 }
 
-warningBtn.addEventListener('click', () => createwarningNotification())
+warningBtn.addEventListener('click', () => createWarningNotification())
 
-function createwarningNotification() {
+function createWarningNotification() {
   const notificationEl = document.createElement('div')
   notificationEl.classList.add('notification-box', 'warning-box', 'show')
 
   notificationEl.innerHTML = `
-  <i class="icon warning-icon fas fa-comment fa-2x"></i>
+  <i class="icon warning-icon fas fa-exclamation-triangle fa-2x"></i>
   <div class="content">
     <h2 class="title warning-title">Warning notification</h2>
     <p class="text">This is a warning notification</p>
@@ -65,16 +65,16 @@ function createwarningNotification() {
   }, 3000)
 }
 
-errorBtn.addEventListener('click', () => createerrorNotification())
+errorBtn.addEventListener('click', () => createErrorNotification())
 
-function createerrorNotification() {
+function createErrorNotification() {
   const notificationEl = document.createElement('div')
   notificationEl.classList.add('notification-box', 'error-box')
 
   notificationEl.innerHTML = `
-  <i class="icon error-icon fas fa-comment fa-2x"></i>
+  <i class="icon error-icon fas fa-times-circle fa-2x"></i>
   <div class="content">
-    <h2 class="title error-title">error notification</h2>
+    <h2 class="title error-title">Error notification</h2>
     <p class="text">This is an error notification</p>
   </div>`
   
