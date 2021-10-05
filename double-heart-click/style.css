@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f2f3f4;
+  color: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: #ffff;
+  padding: 30px;
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 8px 16px rgba(49, 49, 49, 0.3);
+  box-shadow: 3px 8px 16px rgba(49, 49, 49, 0.3);
+}
+
+.info {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.info .fa-heart {
+  color: #c0392b;
+}
+
+.love-me {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.love-me img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.love-me .fa-heart {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  color: #c0392b;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-animation: grow 0.4s linear;
+  animation: grow 0.4s linear;
+}
+
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.counter .fa-heart {
+  margin-right: 10px;
+  font-size: 20px;
+  position: relative;
+}
+
+.counter .fa-heart.animation:after {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c0392b;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: scalein 0.3s forwards, scaleout 0.2s forwards 0.4s;
+  animation: scalein 0.3s forwards, scaleout 0.2s forwards 0.4s;
+}
+
+.counter h3 {
+  font-weight: 400;
+}
+
+@-webkit-keyframes grow {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(5);
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(5);
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes scalein {
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scalein {
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scaleout {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes scaleout {
+  to {
+    opacity: 0;
+  }
+}
