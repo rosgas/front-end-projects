@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password generator</title>
+  </head>
+  <body>
+    <div id="notification"></div>
+    <h1 id="title">
+      <i class="fas fa-key"></i>
+      Password generator
+    </h1>
+
+    <div id="container">
+      <div id="card">
+        <div id="image">
+          <img src="secure-login-bro.png" alt="" />
+          <a class="attribute" href="https://storyset.com/people">
+            People illustrations by Storyset
+          </a>
+        </div>
+
+        <div id="pass-generator">
+          <h2>Generate a secure password</h2>
+
+          <h3>
+            A password generator to instantly create a secure, random password.
+          </h3>
+
+          <div id="pass-box">
+            <div id="password">f&Hii8:Jf?</div>
+            <button id="copy" onclick="copyToClickBoard()">
+              <i class="far fa-copy fa-2x"></i>
+            </button>
+          </div>
+
+          <div class="line"></div>
+
+          <h3>Customize your password:</h3>
+
+          <div id="pass-lenght">
+            <label>Lenght</label>
+            <input
+              type="range"
+              min="4"
+              max="20"
+              value="10"
+              id="range-input"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output class="lenght">10</output>
+          </div>
+
+          <div class="checkboxes">
+            <div class="left">
+              <div class="line-box">
+                <label>Include uppercase</label>
+                <input type="checkbox" id="uppercase" checked="checked" />
+              </div>
+              <div class="line-box">
+                <label>Include lowercase</label>
+                <input type="checkbox" id="lowercase" checked="checked" />
+              </div>
+            </div>
+
+            <div class="right">
+              <div class="line-box">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked="checked" />
+              </div>
+              <div class="line-box">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked="checked" />
+              </div>
+            </div>
+          </div>
+
+          <button id="generate" class="btn">
+            Generate
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
