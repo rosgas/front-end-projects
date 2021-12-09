@@ -118,6 +118,10 @@ h1 {
   overflow: scroll;
 }
 
+#notes .note-cards::-webkit-scrollbar {
+  display: none;
+}
+
 .note-cards .card {
   height: 0;
   width: 0;
