@@ -546,6 +546,12 @@ h1 {
   }
 }
 
+@media (max-width: 750px) {
+  .note-cards .card.show {
+    width: 95%;
+  }
+}
+
 @media (max-width: 550px) {
   #board {
     width: 100%;
