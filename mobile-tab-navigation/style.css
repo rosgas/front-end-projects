@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+h1 {
+  color: #091d36;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+h2,
+h3,
+a {
+  color: #38485c;
+}
+
+p {
+  color: #687483;
+}
+
+.highlighted {
+  font-weight: bold;
+}
+
+.home-page,
+.gallery,
+.blog,
+.about {
+  display: none;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+/* Home page */
+
+.home-page {
+  height: 100vh;
+  background: url(img/spacejoy-IH7wPsjwomc-unsplash.jpg) no-repeat center
+    center/cover;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 25px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.home-title {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.home-subtitle {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Gallery */
+
+.gallery {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 90px;
+}
+
+.gallery section img {
+  width: 100vw;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.gallery-subtitle {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Top page logo gallery/blog page */
+
+.gallery:before,
+.blog:before,
+.about::before {
+  content: "\f299";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  font-size: 90px;
+  color: rgba(248, 196, 113, 0.4);
+  transform: rotate(90deg);
+  z-index: -1;
+}
+
+/* Blog */
+.blog {
+  padding: 15px 15px 90px 15px;
+}
+
+.blog-title {
+  margin: 10px 0 20px;
+}
+
+.blog section {
+  text-align: start;
+  margin: 20px 0;
+}
+
+.blog section img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.blog section h3 {
+  margin-bottom: 10px;
+}
+
+.blog section p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.blog section a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* About page */
+.about {
+  padding: 0 15px 100px 15px;
+  background: url(/img/jason-goodman-fznQW-kn5VU-unsplash.jpg) no-repeat center
+    center/cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+/* Attribute */
+.attribute {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(49, 49, 49, 0.8);
+  margin-bottom: 10px;
+}
+
+.attribute a {
+  color: rgba(49, 49, 49, 0.8);
+}
+
+.home-page .attribute {
+  position: absolute;
+  bottom: 90px;
+}
+
+.blog .attribute,
+.about .attribute {
+  margin-top: 30px;
+}
+
+/* Navigation bar */
+
+nav {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(49, 49, 49, 0.8);
+}
+
+nav ul {
+  list-style: none;
+  width: 100vw;
+
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+nav ul li {
+  text-align: center;
+  cursor: pointer;
+  color: #f8c471;
+}
+
+nav ul p {
+  color: #f8c471;
+}
+
+nav ul li:hover,
+nav ul li.active,
+nav ul p:hover,
+nav ul li.active p {
+  color: #dc7633;
+}
+
+nav ul li i {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* Mediun/Large-screen */
+
+.large-medium-screen {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 750px;
+  text-align: center;
+}
+
+.card h1 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+@media (min-width: 600px) {
+  .container,
+  nav {
+    display: none;
+  }
+
+  .large-medium-screen {
+    display: block;
+  }
+}
