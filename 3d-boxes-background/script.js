@@ -18,7 +18,6 @@ function createBigBoxes() {
       const box = document.createElement("div");
       box.classList.add("box");
       box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
-      console.log(box);
       boxes.appendChild(box);
     }
   }
